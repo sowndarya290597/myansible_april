@@ -1,7 +1,7 @@
 ---
 - hosts: all
   become: true
-  gather_facts: yes
+ # gather_facts: yes
   tasks:
   - name: I want to install apache2 webserver
     apt:
@@ -14,4 +14,16 @@
         name: apache2
         state: started
     when: ansible_os_family=="Debian"
+
+  - name: I want to install webserver on amazon nodes
+    dnf:
+        name: httpd
+        state: present
+    when: ansible_os_family=="RedHat"
+
+  - name: I want to start webserver on amazon nodes
+    service:
+        name: httpd
+        state: started
+    when: ansible_os_family=="RedHat"
 
