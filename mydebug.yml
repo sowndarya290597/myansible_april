@@ -5,7 +5,6 @@
   - name: I want to execute direct linux command
     command: hostname -f
     register: myfirstresult
-    when: ansible_os_family in ["Debian", "RedHat"]
 
   - name: I want to debug my first tasks
     debug:
@@ -21,6 +20,8 @@
     apt:
       name: wget
       state: present
-    when: myfirstresult.stderr==""
+    when:
+        ansible_os_family in ["Debian", "RedHat"]
+        myfirstresult.stderr==""
   #when: ansible_os_family in ["Debian", "RedHat"]
     
