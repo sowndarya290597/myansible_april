@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: true
+  vars:
+    myvar01: git
+    myvar02: tree
+    mtvar03: wget
+  tasks:
+  - name: display myvar01
+    debug:
+      msg: "{myvar01}"
+
+  
