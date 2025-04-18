@@ -21,7 +21,7 @@
       name: wget
       state: present
     when:
-        ansible_os_family in ["Debian", "RedHat"]
-        myfirstresult.stderr==""
+        - ansible_os_family in ["Debian", "RedHat"]
+        - myfirstresult.stderr==""
   #when: ansible_os_family in ["Debian", "RedHat"]
     
