@@ -1,5 +1,5 @@
 ---
 mywebpackageonubuntu: apache2
 mywebpackageonredhat: httpd
-myjavapackonubuntu: openjdk-8-jre
-myjavapackonRedHat: java-1.8.0-amazon-corretto
+myjavapackonubuntu: openjdk-17-jdk
+myjavapackonRedHat: java-17-amazon-corretto-headless
