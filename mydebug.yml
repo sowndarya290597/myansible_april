@@ -9,3 +9,15 @@
   - name: I want to debug my first tasks
     debug:
        msg: "{{myfirstresult}}"
+
+  - name: I want to install tree
+    apt:
+      name: tree
+      state: present
+    when: myfirstresult.stderr!=""
+
+  - name: I want to install wget
+    apt:
+      name: wget
+      state: present
+    when: myfirstresult.stderr!=""
