@@ -30,8 +30,7 @@
       dest: /home/sow/myfolder/ubuntu
       force_basic_auth: yes
   handlers:
-  - name: mywebserverstart
-    service:
-      name: apache2
-      state: restarted
-    
+  - name: installtree
+    apt:
+      name: tree
+      state: present
