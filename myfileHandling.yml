@@ -7,3 +7,13 @@
     apt:
       name: apache2
       state: present
+      
+  - name: I want to create a folder
+    file:
+      path: /home/sow/myfolder
+      state: directory
+
+  - name: I want to copy a file into myfolder
+    copy:
+      src: mytestfile
+      dest: /home/sow/myfolder
