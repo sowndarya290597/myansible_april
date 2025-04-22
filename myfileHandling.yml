@@ -22,7 +22,7 @@
     template:
        src: myindex.j2
        dest: /var/www/html/index.html
-    notify: mywebserverstart
+    notify: installtree1
 
   - name: I want to download internet file
     get_url:
@@ -30,7 +30,7 @@
       dest: /home/sow/myfolder/ubuntu
       force_basic_auth: yes
   handlers:
-  - name: installtree
+  - name: installtree1
     apt:
       name: tree
       state: present
