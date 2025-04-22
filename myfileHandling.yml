@@ -25,7 +25,7 @@
 
   - name: I want to download internet file
     get_url:
-      url: http://example.com/path/file/conf
-      dest: /etc/foo.conf
+      url: https://askubuntu.com/questions/1452457/javac-11-to-17-in-ubuntu-20-04
+      dest: /home/sow/myfolder/ubuntu
       force_basic_auth: yes
     
