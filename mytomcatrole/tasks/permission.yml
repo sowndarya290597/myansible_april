@@ -1,0 +1,6 @@
+---
+- name: change owner on tomcat
+  command: 'sudo chown -R tomcat: /opt/tomcat'
+
+- name: change execute permission on bin
+  command: sudo sh -c 'chmod +x /opt/tomcat/bin/*.sh'
