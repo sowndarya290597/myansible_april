@@ -1,5 +1,5 @@
 ---
-- hosts:
+- hosts: myappservers
   become: true
   roles:
    - mytomcatrole
